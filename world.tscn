@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2tnuomenwg0y"]
+
+[ext_resource type="PackedScene" uid="uid://c6vkin66p3ips" path="res://enemy.tscn" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://xhjbjq6avrpk" path="res://world.gd" id="1_fj7yv"]
+
+[node name="world" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_fj7yv")
+
+[node name="background" type="ColorRect" parent="."]
+visible = false
+offset_left = 103.0
+offset_top = 53.0
+offset_right = 1046.0
+offset_bottom = 610.0
+color = Color(1, 0, 0, 1)
+
+[node name="Enemy" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(598, 335)
+
+[node name="Enemy2" parent="." instance=ExtResource("1_f3sb7")]
+position = Vector2(563, 294)
